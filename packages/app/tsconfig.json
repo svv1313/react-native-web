@@ -13,8 +13,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "common*": ["../common*"]
-  },
+      "common*": ["../common/dist/components*"]
+    },
   },
   "exclude": ["node_modules", "babel.config.js"]
 }
