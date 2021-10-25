@@ -6,7 +6,10 @@
     "start": "react-native start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "adb reverse tcp:7007 tcp:7007 && start-storybook",
+    "build-storybook": "build-storybook",
+    "prestorybook": "rnstl"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -14,20 +17,48 @@
   },
   "devDependencies": {
     "@react-native-community/cli-platform-android": "^6.1.0",
+    "@storybook/addon-actions": "^5.3",
+    "@storybook/addon-knobs": "^5.3",
+    "@storybook/addon-links": "^5.3",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.31",
     "@types/react-native": "^0.65.10",
     "@types/react-test-renderer": "^17.0.1",
     "babel-core": "^6.26.3",
     "babel-jest": "^27.3.1",
+    "babel-loader": "^7.1.5",
     "cross-env": "^7.0.3",
     "jest": "^27.3.1",
     "metro-react-native-babel-preset": "^0.66.2",
+    "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "react-native-storybook-loader": "^2.0.4"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "workspaces": {
+    "nohoist": [
+      "react-native",
+      "react-native/**",
+      "@react-native-community",
+      "@react-native-community/**",
+      "@storybook",
+      "@storybook/**"
+    ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./storybook"
+      ],
+      "pattern": "**/*.stories.js"
+    } 
   }
 }
