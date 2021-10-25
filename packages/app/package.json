@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-native": "^0.66.1",
-    "@wow/common": "1.0.0"
+    "react-native": "^0.66.1"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
