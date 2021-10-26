@@ -29,4 +29,4 @@ yarn android
 ```
 yarn build
 ```
-(in ./packages/common)
+(inside ./packages/common)
