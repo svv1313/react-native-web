@@ -13,7 +13,7 @@ yarn start
 ```
 cd ./packages/app
 ```
-###### delete the react folder from node_modules
+###### delete the react folder from node_modules to prevent conflicts
 ```
 yarn start
 yarn android
